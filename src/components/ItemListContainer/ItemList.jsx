@@ -9,17 +9,24 @@ import Item from './Item'
 export const ItemList = () => {
     const { category } = useParams()
     const [products, setProducts] = useState([])
-    const [spineer, setSpinner] = useState(true)
+    const [spineer, setSpinner] = useState()
 
     useEffect(() => {
+        setSpinner(true)
         const getProducts = new Promise((resolve, reject) => {
             resolve(Data)
         })
         getProducts
             .then((result) => {
                 let aux = Data.filter((element) => element.category == category)
-                setProducts(aux)
-                setSpinner(false)
+                if (category !== undefined) {
+                    setProducts(aux)
+                } else {
+                    setProducts(Data)
+                }
+                setTimeout(() => {
+                    setSpinner(false)
+                }, 500)
             })
             .catch((err) => {
                 console.log(err)
