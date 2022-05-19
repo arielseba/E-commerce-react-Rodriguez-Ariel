@@ -1,3 +1,6 @@
+<p><img src="https://github.com/arielseba/E-commerce-react-Rodriguez-Ariel/blob/ff97adc1d78d38c539fafcaed9e2fb5e36550cb6/GIF-220519_120045.gif" alt=""></p>
+
+
 <h1> Pet Shops Firulays🐶</h1><br>
    <h3>Desarrollado por Ariel Rodriguez</h3><br><br>
    
